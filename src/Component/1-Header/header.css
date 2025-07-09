@@ -1,0 +1,144 @@
+/* ===========================
+ table of contents
+==============================
+
+1. header navigation
+2. modal
+3. icon buttons
+4. responsive
+*/
+
+/* ===============
+   1. header navigation
+================ */
+.header__nav-list.flex {
+  gap: 20px;
+  margin-left: -30px;
+}
+.header__nav-link {
+  color: var(--title);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.header__nav-link:hover {
+  color: var(--blue);
+  font-size: 1.1rem;
+}
+.header__nav {
+  background-color: var(--bgcolorheader);
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 40px rgb(69, 69, 69);
+}
+
+/* ===============
+   2. modal
+================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.205);
+  backdrop-filter: blur(4px);
+  color: #000;
+}
+.modal-content{
+  background-color: var(--secondary);
+  color: var(--title);
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  animation: modal 1s 1;
+}
+
+.modal-content a{
+  color: var(--title);
+}
+.modal-content a:hover{
+  transition: ease 0.3s;
+  color: gray;
+}
+.modal-content li{
+  padding: 10px;
+  font-size: 20px;
+}
+.modal-content ul li:first-child {
+  text-align: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.modal-divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+/* ===============
+   3. icon buttons
+================ */
+.light .header__menu-toggle{
+color: #000;}
+.header__mode-toggle,
+.header__menu-toggle {
+  background-color: var(--border);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.7s;
+  cursor: pointer;
+  box-shadow: 1px 1px 40px #000;
+}
+.header__mode-toggle:hover,
+.header__menu-toggle:hover {
+  border: 1px solid orange;
+}
+.modal-close {
+  transition: all 0.5s;
+}
+.modal-close:hover {
+  font-size: 1.7rem;
+  color: red;
+  rotate: 180deg;
+}
+
+@keyframes modal {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* ===============
+   4. responsive
+================ */
+@media (max-width: 700px) {
+  .header__nav {
+    display: none;
+  }
+  .header__menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+  .header__center {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  .header__menu-toggle {
+    display: none;
+  }
+}

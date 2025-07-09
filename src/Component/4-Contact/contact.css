@@ -1,0 +1,136 @@
+/* لون العنوان */
+.top-section .title {
+  color: var(--title);
+}
+
+/* أيقونة الإيميل */
+.top-section .iconemail {
+  color: var(--blue);
+}
+
+/* زرار الإرسال */
+.top-section .btn-submit {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+/* النصوص الثانوية */
+.top-section .subtitle {
+  color: var(--subtitle);
+  margin-top: 10px;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+/* تنسيق عام لجزء النموذج */
+section .contactus {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* تنسيق الحقول */
+.email,
+.message-area {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* حقل الإيميل */
+.email input {
+  outline: none;
+  color: var(--title);
+  background-color: var(--border);
+  border: 1px solid var(--subtitle);
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+/* تركيز على حقل الإيميل */
+.email input:focus {
+  border: 1px solid var(--blue);
+}
+
+/* Placeholder داخل حقل الإيميل */
+.email input::placeholder {
+  color: var(--subtitle);
+}
+
+/* عنوان حقل الرسالة */
+.message-area .title {
+  color: var(--subtitle);
+  font-size: 1.3rem;
+}
+
+/* مربع الرسالة */
+.message-area .input-area {
+  outline: none;
+  padding: 12px;
+  min-height: 120px;
+  font-size: 18px;
+  color: var(--title);
+  background-color: var(--border);
+  border: 1px solid var(--subtitle);
+  border-radius: 10px;
+  width: 100%;
+  resize: vertical; /* يسمح بتغيير الحجم فقط رأسيًا */
+}
+
+/* عند التركيز على حقل الرسالة */
+.message-area .input-area:focus {
+  border: 1px solid var(--blue);
+}
+
+/* Placeholder داخل حقل الرسالة */
+.message-area .input-area::placeholder {
+  color: var(--subtitle);
+  font-size: 18px;
+}
+
+/* تأثير hover على زر الإرسال */
+.btn-submit:hover {
+  background-color: var(--blue);
+  color: white;
+  transition: 0.3s;
+}
+/* للأجهزة تحت 900px */
+@media (max-width: 900px) {
+  .right-section {
+    display: none;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .email,
+  .message-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .email input,
+  .message-area .input-area {
+    font-size: 16px;
+  }
+
+  .contactus .btn-submit {
+    display: flex;
+    margin: 20px auto 0;
+  }
+}
+
+/* إخفاء الأنيميشن للأجهزة تحت 1200px */
+@media (max-width: 1200px) {
+  .right-section {
+    display: none;
+  }
+}
